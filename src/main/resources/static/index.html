@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ism — Arabic Name Transliteration Matcher</title>
+
+<link href="style.css" rel="stylesheet"/></head>
+<body>
+<header>
+<div class="brand">
+<div class="brand-mark">ا</div>
+<div class="brand-copy">
+<strong>Ism</strong>
+<span>Arabic name transliteration matcher</span>
+</div>
+</div>
+<div class="topnote">Developed by <a href="https://github.com/SaharCreations" target="_blank" rel="noopener noreferrer">SaharCreations</a></div>
+</header>
+<main>
+<section class="hero">
+<div>
+<div class="eyebrow">Identity through spelling</div>
+<h1>Two spellings.<br/>One name?</h1>
+</div>
+<div class="hero-side">
+<p>
+        Ism examines how Arabic-origin names shift when written in Latin script,
+        then shows the evidence behind the match instead of returning a black-box answer.
+      </p>
+<div class="arabic-note">هل هما الاسم نفسه؟</div>
+</div>
+</section>
+<section class="lab-shell" id="lab">
+<div class="lab-top">
+<div>Case file / <span id="caseNumber">001</span></div>
+<div class="center">TRANSLITERATION TRACE</div>
+<div class="right">Arabic → Latin</div>
+</div>
+<div class="compare-stage">
+<section class="specimen left" data-letter="A">
+<div class="specimen-tag">
+<span>Specimen A</span>
+</div>
+<input autocomplete="off" class="name-input" id="nameA" spellcheck="false" value="Mohammed"/>
+<div class="input-meta">
+<span>Latin-script rendering</span>
+<span id="countA">8 chars</span>
+</div>
+<div class="glyph-strip" id="glyphA"></div>
+</section>
+<div class="spine">
+<div class="spine-line"></div>
+<div class="rings"></div>
+<button class="orb" id="compareBtn">
+<div class="orb-inner">
+<strong>Trace</strong>
+<small>compare</small>
+</div>
+</button>
+</div>
+<section class="specimen right" data-letter="B">
+<div class="specimen-tag">
+<span>Specimen B</span>
+</div>
+<input autocomplete="off" class="name-input" id="nameB" spellcheck="false" value="Muhammad"/>
+<div class="input-meta">
+<span>Latin-script rendering</span>
+<span id="countB">8 chars</span>
+</div>
+<div class="glyph-strip" id="glyphB"></div>
+</section>
+</div>
+<div class="result-drawer" id="resultDrawer">
+<div class="verdict-grid">
+<section class="score-panel">
+<div class="score-label" id="status">Likely same name</div>
+<div class="score-wrap">
+<div class="score" id="score">92</div>
+<div class="score-pct">%</div>
+</div>
+<div class="pair" id="pair">Mohammed ↔ Muhammad</div>
+<div class="summary" id="summary">
+            The two spellings preserve the same core structure. Most visible differences fall into common Arabic-to-Latin transliteration variation.
+          </div>
+</section>
+<section class="evidence-panel">
+<div class="evidence-title">
+<h3>Evidence trail</h3>
+<span>weighted factors</span>
+</div>
+<div id="evidence"></div>
+</section>
+</div>
+<div class="analysis-strip">
+<div class="metric"><small>Consonant frame</small><strong id="m1">STRONG</strong></div>
+<div class="metric"><small>Vowel drift</small><strong id="m2">EXPECTED</strong></div>
+<div class="metric"><small>Conflicts</small><strong id="m3">NONE</strong></div>
+<div class="metric"><small>Decision band</small><strong id="m4">LIKELY SAME</strong></div>
+</div>
+</div>
+</section>
+<div class="trybar">
+<div class="examples">
+<button class="chip" data-a="Mohammed" data-b="Muhammad">Mohammed / Muhammad</button>
+<button class="chip" data-a="Yousef" data-b="Yusuf">Yousef / Yusuf</button>
+<button class="chip" data-a="Abdelrahman" data-b="Abdulrahman">Abdelrahman / Abdulrahman</button>
+<button class="chip" data-a="Khaled" data-b="Khalid">Khaled / Khalid</button>
+<button class="chip" data-a="Samir" data-b="Sameer">Samir / Sameer</button>
+</div>
+<div class="prototype-note">Deterministic matcher · explainable weighted scoring</div>
+</div>
+</main>
+
+<script src="app.js"></script></body>
+</html>
