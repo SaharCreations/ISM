@@ -14,6 +14,7 @@ Arabic names frequently appear in multiple Latin spellings because romanization 
 
 The project is intentionally small: the engineering focus is the matching engine, false-positive control, API design, tests, and a polished 30-second demo.
 
+![Ism Demo](screenshots/ism-demo.png)
 ## Demo flow
 
 1. Enter two spellings.
